@@ -1,0 +1,22 @@
+/**绿色皮肤**/
+.Czs{color:#02905e; /**专色**/}
+.l-btn-selected, .l-btn-selected:hover {
+	background-color: #02905e;
+	color:#fff;
+}
+
+/**首页顶部***/
+.header{background:#00a56b;}/**顶部主导航**/
+.menuNav ul.tNav li:hover{background-color:#007b50;}/**顶部主导航 鼠标划过**/
+.menuNav ul.tNav li ul li{border-top:solid 1px #29ba87;background:#00a56b;}/**顶部主导航 下级菜单**/
+.menuNav ul.tNav li ul li:hover{background:#028154;}
+.menuNav ul.tNav li ul li:active{background:#015e3d;}
+.menuNav ul.tNav li ul li ul li{background:#0764a5;}
+.header ul.topRightUsNav li:hover{background:#007b50;}/**顶部右侧鼠标划过背景**/
+.header ul.topRightUsNav li ul li a:hover{background:#daf1e4;color:#16773f;}/**顶部右侧展开菜单鼠标划过背景**/
+
+/** 页面 地图顶部工具条 **/
+ul.mapTool li a:hover,ul.mapTool li a:hover i.Czs,a.btn.Czs:hover{background-color:#00a56b;color:#fff;}
+
+/********  标题 - 标签切换*******/
+.tabTits ul.djTab abbr.hover,.taTitb ul.bt span.hover{border-bottom:solid 3px #00b56b;color:#1aa56b;}

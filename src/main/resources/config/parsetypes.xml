@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<types>
+	<parse name="none" title="不解析" show="true" service="noneParseService"/>
+	<parse name="GRIB2" title="格点" show="true" fileNamePattern="Z_NWGD_C_{unit}_{publish:yyyyMMddHHmmss}_P_RFFC_{use}-{elementType}_{time}_{range}.GRB2"/>
+</types>

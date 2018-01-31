@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="http://ehcache.org/ehcache.xsd"
+ updateCheck="false">
+
+	<diskStore path="c:/cache/hibernate" />
+	
+	<defaultCache maxElementsInMemory="10000" eternal="false" timeToIdleSeconds="600" timeToLiveSeconds="3600" overflowToDisk="true" ></defaultCache>
+	
+	<!-- 
+    <defaultCache eternal="true" maxElementsInMemory="100" overflowToDisk="false" />  
+	<cache name="cn.javass.demo.model.UserModel" maxElementsInMemory="2000" eternal="false" timeToIdleSeconds="3600" timeToLiveSeconds="3600" overflowToDisk="false" />
+	 -->
+
+	<cache name="org.hibernate.cache.internal.StandardQueryCache" maxElementsInMemory="10000" eternal="false" timeToLiveSeconds="3600" overflowToDisk="true" />
+
+	<cache name="org.hibernate.cache.spi.UpdateTimestampsCache" maxElementsInMemory="10000" eternal="true" overflowToDisk="true" />
+	
+	<!--
+	<cache name="com.southgis.cmap.grid.model.Organize" maxElementsInMemory="10000" eternal="false" timeToLiveSeconds="3600" overflowToDisk="true" />
+	<cache name="com.southgis.cmap.grid.model.EventProcess" maxElementsInMemory="10000" eternal="false" timeToLiveSeconds="3600" overflowToDisk="true" />
+	<cache name="com.southgis.cmap.grid.model.PcbhAudit" maxElementsInMemory="10000" eternal="false" timeToLiveSeconds="3600" overflowToDisk="true" />
+	<cache name="com.southgis.cmap.grid.model.PublishMessage" maxElementsInMemory="10000" eternal="false" timeToLiveSeconds="3600" overflowToDisk="true" />
+	<cache name="com.southgis.cmap.grid.model.WorkingGuide" maxElementsInMemory="10000" eternal="false" timeToLiveSeconds="3600" overflowToDisk="true" />
+	<cache name="com.southgis.cmap.grid.model.MsgFiles" maxElementsInMemory="10000" eternal="false" timeToLiveSeconds="3600" overflowToDisk="true" />
+	<cache name="com.southgis.cmap.grid.model.CrawlInfo" maxElementsInMemory="10000" eternal="false" timeToLiveSeconds="3600" overflowToDisk="true" />
+	<cache name="com.southgis.cmap.grid.model.CrawlNet" maxElementsInMemory="10000" eternal="false" timeToLiveSeconds="3600" overflowToDisk="true" />
+	<cache name="com.southgis.cmap.grid.model.CrawlKeyWord" maxElementsInMemory="10000" eternal="false" timeToLiveSeconds="3600" overflowToDisk="true" />
+	<cache name="com.southgis.cmap.grid.model.CrawlGazetteer" maxElementsInMemory="10000" eternal="false" timeToLiveSeconds="3600" overflowToDisk="true" />
+	<cache name="com.southgis.cmap.grid.model.LogEventFiles" maxElementsInMemory="10000" eternal="false" timeToLiveSeconds="3600" overflowToDisk="true" />
+	<cache name="com.southgis.cmap.grid.model.Appraise" maxElementsInMemory="10000" eternal="false" timeToLiveSeconds="3600" overflowToDisk="true" />
+	<cache name="com.southgis.cmap.grid.model.Log" maxElementsInMemory="10000" eternal="false" timeToLiveSeconds="3600" overflowToDisk="true" />
+	<cache name="com.southgis.cmap.grid.model.EventType" maxElementsInMemory="10000" eternal="false" timeToLiveSeconds="3600" overflowToDisk="true" />
+	-->
+</ehcache>

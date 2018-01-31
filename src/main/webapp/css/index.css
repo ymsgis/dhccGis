@@ -1,0 +1,69 @@
+/**通用   顶部导航**/
+.HMainBx{ position:fixed; left:0px; top:56px; right:0px; bottom:0px;background:#eee;}
+
+/*****  整体风格布局样式 ********/
+.header{ height:56px;}
+.header .ilogo{height: 56px;width:359px;border-right:solid 1px rgba(255,255,255,0.3); display: inline-block;background-image: url(../img/logo.png);background-repeat: no-repeat;background-position: left center;}
+
+/**默认布局顶部主导航菜单**/
+.menuNav{position:fixed;z-index:991; top:0px;left:360px; width:auto;height:56px;}
+@media screen and (max-width: 1201px) { 
+	.header .ilogo{width:56px;}
+	.menuNav{left:57px;}
+} 
+
+.menuNav ul.tNav{margin:0px; padding:0px; list-style:none;}
+.menuNav ul.tNav li{width:120px;height:56px;margin:0px;  border-right:solid 1px rgba(255,255,255,0.3);font-size:14px; display:inline; float:left;}
+.menuNav ul.tNav li:hover{background:url(../img/itopNavAhover.png) repeat-x left bottom;line-height:52px;/**皮肤**/}
+.menuNav ul.tNav li:hover ul{display:block;}
+.menuNav ul.tNav li a{text-align:center; color:#fff;height:56px; line-height:56px; display:block; }
+.menuNav ul.tNav li a i.iconfont{margin-right:6px;}
+.menuNav ul.tNav li a:hover{}
+
+.menuNav ul.tNav li ul{display:none;position:relative; top:0px; left:0px;width:160px;font-size:12px;}
+.menuNav ul.tNav li ul li{width:160px;height:40px; font-size:12px;padding:0px;/**皮肤**/}
+.menuNav ul.tNav li ul li a{height:40px; line-height:40px;padding-left:20px;color:#fff;text-align:left;}
+.menuNav ul.tNav li ul li:hover{/**皮肤**/}
+.menuNav ul.tNav li ul li:active{/**皮肤**/}
+.menuNav ul.tNav li ul li:hover ul{visibility:visible;}
+.menuNav ul.tNav * i.xjjt{float:right;margin-top:15px;margin-right:10px;border-bottom: 4px solid transparent;
+    border-top: 4px solid transparent;
+    border-left: 4px solid #ffffff;
+    content: "";
+    display: inline-block;
+    height: 0;
+    vertical-align: top;
+    width: 0;}
+.menuNav ul.tNav li ul li ul{visibility:hidden; position:relative; top:-41px; left:158px;}
+.menuNav ul.tNav li ul li ul li{/**皮肤**/}
+
+
+/**默认布局右侧用户信息**/
+.header ul.topRightUsNav{float:right;width:auto;margin-top:8px;margin-right:10px;}
+.header ul.topRightUsNav li{ position:relative;float:right;display:inline-block;width:auto;padding:0;text-align:center;line-height:40px;}
+.header ul.topRightUsNav li:hover{height:40px;border-radius: 5px;}
+.header ul.topRightUsNav li a{padding:0 12px;}
+.header ul.topRightUsNav li.yxj:hover{border-radius: 5px 5px 0  0;}
+.header ul.topRightUsNav li ul{ display:none;position:absolute; z-index:5; top:40px; right:0px;border:solid 1px #ccc;border-radius:4px;background:#fff;box-shadow: 0px 0px 3px rgba(0,0,0,0.2);}
+.header ul.topRightUsNav li:hover ul{display:block;}
+.header ul.topRightUsNav li ul li{min-width:120px;padding:4px;text-align:left;border-bottom:solid 1px #eee; line-height: 32px;}
+.header ul.topRightUsNav li ul li:hover{background:none;height:auto;}
+.header ul.topRightUsNav li ul li a{ display: block;border-radius:4px;line-height: 32px;}
+.header ul.topRightUsNav li ul li a:hover{background:#d8e9f2;height:auto;}
+
+.header ul.topRightUsNav li.names{width:auto;padding:0 10px;}
+.header ul.topRightUsNav li.names a.us i.icoFl{margin-right:6px;}
+.header ul.topRightUsNav li.names a.us i.icoFr{margin-left:6px;font-size:6px;}
+.header ul.topRightUsNav li.names a.us{padding:0 2px;}
+
+/**消息**/
+.header ul.topRightUsNav li.imsg{ position: relative;}
+.header ul.topRightUsNav li.imsg ul li{width:240px;padding:4px;}
+.header ul.topRightUsNav li.imsg .dot{ position:absolute;left:22px;top:10px;width:8px;height:8px;border-radius:50%;background-color:#f00; display: inline-block;}
+
+
+
+
+
+
+

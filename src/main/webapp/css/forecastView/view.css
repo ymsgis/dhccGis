@@ -1,0 +1,62 @@
+body,
+html {
+	padding: 0;
+	margin: 0;
+}
+.titlebar {
+	text-align: center;
+	background: url("images/header.jpg");
+	height: 50px;
+	border: 1px solid silver;
+	line-height: 50px;
+}
+.titlebar label {
+	font-size: 18px;
+	font-weight: bolder;
+	color: white;
+	display: block;
+}
+.menubtn-group .menubtn {
+	float: left;
+	margin: 10px;
+	width: 100px;
+	height: 100px;
+	line-height: 100px;
+	cursor: pointer;
+	text-align: center;	
+	border: 2px outset silver;
+	font-weight: bolder;
+	color: white;
+}
+.menubtn:HOVER {
+	color: blue;
+	border: 2px inset silver;
+}
+a.menubtn {
+	text-decoration: none;
+}
+.menubtn-group .menubtn {
+	background-repeat: no-repeat;
+}
+.menubtn-group .menubtn.disabled {
+	color: red;
+	border: none;
+}
+.fcbtn-01 {
+	background-image: url("images/mbtn-01.jpg");
+}
+.fcbtn-02 {
+	background-image: url("images/mbtn-02.jpg");
+}
+.fcbtn-03 {
+	background-image: url("images/mbtn-03.jpg");
+}
+.fcbtn-04 {
+	background-image: url("images/mbtn-04.jpg");
+}
+.fcbtn-05 {
+	background-image: url("images/mbtn-05.jpg");
+}
+.fcbtn-06 {
+	background-image: url("images/mbtn-06.jpg");
+}

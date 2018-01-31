@@ -1,0 +1,74 @@
+      html,body {
+      height:100%;
+      width:100%;
+      margin:0;
+      padding:0;
+      }
+
+      body {
+      background-color:#FFF;
+      overflow:hidden;
+      font-family:"Trebuchet MS";
+      }
+
+      #header {
+      background-image:url(../images/banner.jpg);
+      background-repeat:repeat-x;
+      border:solid 2px #add9c0;
+      color:#FFF;
+      font-size:18pt;
+      text-align:left;
+      font-weight:700;
+      height:50px;
+      margin:0px;
+      padding: 0px;
+      }
+
+      #subtitle {
+      font-size:small;
+      color:#FFF;
+      padding-left:20px;
+      }
+
+      #rightPane {
+      background-color:#FFF;
+      color:#3f3f3f;
+      border:solid 2px #224a54;
+      width:20%;
+      }
+
+      #leftPane {
+      background-color:#FFF;
+      color:#3f3f3f;
+      border:solid 2px #224a54;
+      width:20%;
+      margin:5px;
+      padding:2px;
+      }
+
+      #map {
+      border:solid 1px #add9c0;
+      -moz-border-radius:1px;
+      -webkit-border-radius:1px;
+      border-radius:1px;
+      margin:0px;
+      padding: 0px;
+      }
+
+      #footer {
+      border:solid 2px #224a54;
+      background-color:#ecefe4;
+      color:#3f3f3f;
+      font-size:10pt;
+      text-align:center;
+      height:40px;
+      margin:2px;
+      }
+
+      .dijitTabInnerDiv {
+      background-color:#ecefe4;
+      }
+
+      #tabs {
+      padding:1px;
+      }

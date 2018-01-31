@@ -1,0 +1,61 @@
+.x-toolbar td,.x-toolbar span,.x-toolbar input,.x-toolbar div,.x-toolbar select,.x-toolbar label,
+.x-btn button,
+.ext-strict .x-grid3-cell-inner, .ext-strict .x-grid3-hd-inner {
+	font-size: 14px;
+}
+.x-form-inline .x-form-item {
+	display: inline-block;
+	margin-left: 5px;
+}
+.x-form-inline .x-btn {
+	display: inline-block;
+	padding-left: 5px;
+}
+
+
+.icon-nav {background-image: url(../images/folder_go.png) !important;}
+.icon-settings {background-image: url(../images/folder_wrench.png) !important;}
+.icon-add {background-image: url(../images/add.gif) !important;}
+.icon-save {background-image: url(../images/save.gif) !important;}
+.icon-man {background-image: url(../images/b066.gif) !important;}
+.icon-sure {background-image: url(../images/sure.png) !important;}
+.icon-edit {background-image: url(../images/edit.gif) !important;}
+.icon-close {background-image: url(../images/close.gif) !important;}
+.lc_del {background-image: url(../images/lc_del.gif) !important;}
+.icon-del {background-image: url(../images/del.gif) !important;}
+.icon-menu {background-image: url(../images/menu.gif) !important;}
+.icon-success {background-image: url(../images/success.gif) !important;}
+.icon-rightPoint {background-image: url(../images/action2.gif) !important;}
+.icon-down {background-image: url(../images/arrow_down.png) !important;}
+.icon-del-gray {background-image: url(../images/del_gray.gif) !important;}
+.icon-search {background-image: url(../images/search.gif) !important;}
+.arrow_rotate_clockwise {background-image: url(../images/arrow_rotate_clockwise.png) !important;}
+.icon-accept {background-image: url(../images/accept.gif) !important;}
+.action_back {background-image: url(../images/action_back.gif) !important;}
+.icon-cancel {background-image: url(../images/cancel.png) !important;}
+.rank_up {background-image: url(../images/rank_up.gif) !important;}
+.UST_tp {background-image: url(../images/UST_tp.gif) !important;}
+.icon-back {background-image: url(../images/back.png) !important;}
+.icon-grid {background-image: url(../images/grid.png) !important;}
+.icon-plugin {background-image: url(../images/plugin.gif) !important;}
+.query {background-image: url(../images/page_white_find.png) !important;}
+.excel {background-image: url(../images/page_excel.png) !important;}
+.icon-tick {background-image: url(../images/tick.png) !important;}
+.icon-rss_delete {background-image: url(../images/rss_delete.png) !important;}
+.print {background-image: url(../images/cog_edit.png) !important;}
+.icon-delete {background-image: url(../images/delete.gif) !important;}
+.icon-info {background-image: url(../images/info.gif) !important;}
+.icon-chart_organisation {background-image: url(../images/chart_organisation.png) !important;}
+.upload-icon {background: url('../image_add.png') no-repeat 0 0 !important;}
+.org-icon {background: url('../images/application_side_list.png') no-repeat 0 0 !important;}
+.grid-icon {background: url('../images/grid.png') no-repeat 0 0 !important;}
+.user_add {background: url('../images/user_add.png') no-repeat 0 0 !important;}
+.group-icon {background: url('../images/user.gif') no-repeat 0 0 !important;}
+.group {background: url('../images/group.png') no-repeat 0 0 !important;}
+.page_white {background: url('../images/page_white.png') no-repeat 0 0 !important;}
+.application_go {background: url('../images/application_go.png') no-repeat 0 0 !important;}
+.image_add {background: url('../images/image_add.png') no-repeat 0 0 !important;}
+.application_form_magnify {background: url('../images/application_form_magnify.png') no-repeat 0 0 !important;}
+.icon-controller {background-image: url(../images/controller.gif) !important;}
+.icon-equip {background-image: url(../images/equip.gif) !important;}
+.icon-gis {background-image: url(../images/MapChange.png) !important;}

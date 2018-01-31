@@ -1,0 +1,174 @@
+html, body, div, p, ul, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, form, input, select, button, textarea, iframe, table, th, td {font-family: Arial, 微软雅黑;font-size: 12px; margin: 0; padding: 0; }
+img { border: 0 none; vertical-align: top; }
+ul, li { list-style-type: none; }
+h1, h2, h3, h4, h5, h6 { font-size: 14px; }
+button { cursor: pointer; }
+i, em, cite { font-style: normal; }
+body { background: #f2f6f9; color: #363636; line-height: 1.2; }
+a, a:link { color: #222; text-decoration: none; }
+a:visited {  }
+a:active, a:hover { text-decoration:none; }
+a:focus { outline: none; }
+html,body{width:100%;}
+.clearfloat { /* 此类应当放在 div 或 break 元素上，而且该元素应当是完全包含浮动的容器关闭之前的最后一个元素 */
+	clear:both;height:0;font-size: 0px;
+    line-height: 0px;}
+.hidn{ display:none;}
+.disIB{ display: inline-block;}
+.fl{ float:left;}
+.fr{ float:right;}
+.cur{ cursor: pointer;}
+.txC{ text-align: center;}
+.rfg{/**分隔线**/ border-right:solid 1px #ddd;padding-right:12px;margin-right:12px;}
+
+html,body,iframe{width:100%;height:100%;}
+
+body.page{background-color: #fff;}
+html body.page.pgaut{height:auto;}
+
+
+/*****定位*****/
+.dw-XD{ position: relative;}
+.dw-JD{ position: absolute;}
+.dw-gD{ position: fixed;}
+.L0{left:0;}.T0{top:0;}.R0{right:0;}.B0{bottom: 0;}
+.L20{left:20px;}.R20{right:20px;}
+
+.r-ico{top:-2px;right: 8px;}
+.r-ico.Tjk{top:6px;}
+
+
+/**超出隐藏不换行**/
+.bhh{display:block;word-break:keep-all;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+
+/**右侧分页**/
+
+
+/**边框***/
+.mWindBx{ position: relative;}
+.mWindBx .jtMs{ position:absolute;right:32px; z-index:2;border-left:solid 1px #ccc;border-top:solid 1px #ccc;width:8px;height:8px;transform:rotateZ(45deg); display: inline-block;background-color:#fff;}
+.mBox{position:absolute;top:4px;border:solid 1px #ccc;box-shadow: 1px 1px 3px rgba(0,0,0,0.2);background-color:#fff;padding:5px;border-radius:4px;}
+
+
+
+
+/**内容页面两边间隔***/
+.pageWk{padding:0 20px;}
+
+
+
+/**表单**/
+input[type=text]{padding:4px 6px;border:solid 1px #ccc;}
+
+
+
+
+/***宽度**/
+.W320{width:320px;}
+.W10b{width:100%;}.W7b{width:70%;}.W4b{width:40%;}.W35b{width:35%;}.W3b{width:30%;}.W25b{width:25%;}.W2b{width:20%;}
+.ML-4b{margin-left: 40%;}.ML-35b{margin-left: 35%;}.ML-3b{margin-left: 30%;}.ML-25b{margin-left: 25%;}.ML-2b{margin-left: 20%;}
+
+
+
+/**按钮**/
+a.btn{/**边框**/height:26px;line-height:26px;margin-left:2px;margin-right:2px; background-color:#f3f3f3;border:solid 1px #bbb;border-radius:3px;padding:0 14px;color:#777;display: inline-block;}
+a.btn .iconfont,a.btns .iconfont{font-size:12px;margin-right:4px;}
+a.btn:hover{color:#fff;background-color:#999;border-color:#999;}
+a.btns{/**实心**/height:28px;line-height:28px;margin-left:2px;margin-right:2px; text-align: center; background-color:#aaa;border-radius:3px;padding:0 14px;color:#fff;display: inline-block;}
+a.btns:hover{background-color:#555;}
+a.btns.bQh{/**暗红**/background-color:#d85757;}
+a.btns.bQh:hover{background-color:#961919;}
+a.btns.bSl{/**深蓝**/background-color:#2390c8;}
+a.btns.bSl:hover{background-color:#0d5a82;}
+a.btns.bAz{/**暗紫**/background-color:#b472b6;}
+a.btns.bAz:hover{background-color:#58235a;}
+
+
+
+/**间隔**/
+.M4{margin:4px;}.M24{margin:24px;}
+.Mt-4{margin-top:4px;}.Mt-6{margin-top:6px;}.Mt-8{margin-top:8px;}.Mt-12{margin-top:12px;}
+.Mr-8{margin-right:8px;}.Mr-12{margin-right:12px;}.Mr-320{margin-right:320px;}
+.Mb-12{margin-bottom:12px;}
+.Ml-8{margin-left:8px;}
+.P6{padding:6px;}.P12{padding:5px;}
+.Pt-8{padding-top:8px;}.Pt-12{padding-top:12px;}
+.Pb-0{padding-bottom:0;}
+
+
+
+
+/**线条**/
+.Bl-s-1d{border-left:solid 1px #ddd;}
+.Bt-s-1d{border-top:solid 1px #ddd;}
+
+
+
+/**特殊区块**/
+.llsBx{background-color:#f3fafc;border:solid 1px #d4ecf5;}
+
+
+/***文字大小*****/
+.F18{font-size:18px;}
+
+
+
+/************颜色**********/
+
+.Chf{color:#fff;}a.Chf:hover{color:#ff0;}
+.Ch8{color:#888;}
+.Ch4{color:#444;}
+.Ch2{color:#222;}
+.Ch0{color:#000;}
+.Chs{color:#f00;}/**红色**/}
+
+
+
+
+/****背景色***/
+.BvsA,a.btnB.BvsA{background-color:#32b432;/**中绿**/}
+.BvsB{background-color:#1ba565; /**中绿**/}
+.BlsA{background-color:#3bb4f2; /**蓝色**/}
+.BcsA{background-color:#f37b1d; /**橙色**/}
+.BhsA{background-color:#dd514c; /**红色**/}
+.BlsC{background-color:#5e8db9; /**灰蓝**/}
+.BlsB{background-color:#2265b3; /**深蓝**/}
+.BvsC{background-color:#7daf1d; /**翠绿**/}
+.BthA{background-color:#c16513; /**土黄**/}
+.BhFa{background-color:#fafafa; /****/}
+.BhFf{background-color:#fff; /****/}
+
+
+
+
+/***背景鼠标划过变白**/
+a.BvsA:hover, a.BvsB:hover , a.BlsA:hover, a.BcsA:hover, a.BhsA:hover, a.BlsC:hover,
+a.BlsB:hover,a.BvsC:hover,a.BthA:hover{background-color:#222;}
+.bKB:hover{ background-color:#fff;}
+
+
+/****** 标签 页切换 ******/
+.qiehTab{}
+.qiehTab{}
+
+
+
+
+
+
+/**** 折叠功能 *****/
+.hide{}
+.fold{}
+.fold{}
+
+
+
+
+
+
+
+
+
+
+
+

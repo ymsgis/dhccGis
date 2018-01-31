@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>ImageChooser.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link type="text/css" rel="stylesheet" href="../../resources/css/ext-all.css"/>
+    <script type="text/javascript" src="../../adapter/ext/ext-base.js"></script>
+	<script type="text/javascript" src="../../ext-all-debug.js"></script>
+	<script type="text/javascript" src="./Ext.ux.ImageCuter.js"></script>
+	<script type="text/javascript">
+		Ext.onReady(function(){
+			var ic = new Ext.ux.ImageCuter({
+				baseImgX:150,                //设置图片框的位置x       
+				baseImgY:100,                //设置图片框的位置y   
+				baseImgWidth:100,            //图片剪裁框的宽度度
+				baseImgHeight:100,           //图片剪裁框的高度
+				baseImgBorder:true,          //图像剪裁框是否有边框
+				imageUrl:"aa.jpg",           //加载图片的路径
+				opacity:80,                  //图片蒙版透明度
+				imgWidth:600,               //图片原始宽度
+			    imgHeight:375,              //图片原始高度
+			    onClickOKButton:function(x,y,w,h){
+					alert("x:"+x+"  y:"+y+"  w:"+w+"  h:"+h);
+				},
+				onClickCancelButton:function(){
+					alert("cancel");
+				}
+			});
+			ic.show();
+			
+		});
+	
+	</script>
+  </head>
+  
+  <body>
+  </body>
+</html>

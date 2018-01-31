@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+            http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+        	http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.1.xsd
+            http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.1.xsd
+        	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.1.xsd
+           http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.1.xsd">
+
+	<!-- alibaba configuration -->
+	<bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource"
+		init-method="init" destroy-method="close">
+		<property name="url" value="${datasource.url}" />
+		<property name="username" value="${datasource.username}" />
+		<property name="password" value="${datasource.password}" />
+		<property name="filters" value="${alibaba.filters}" />
+		<property name="maxActive" value="${alibaba.maxActive}" />
+		<property name="initialSize" value="${alibaba.initialSize}" />
+		<property name="maxWait" value="${alibaba.maxWait}" />
+		<property name="minIdle" value="${alibaba.minIdle}" />
+		<property name="timeBetweenEvictionRunsMillis" value="${alibaba.timeBetweenEvictionRunsMillis}" />
+		<property name="minEvictableIdleTimeMillis" value="${alibaba.minEvictableIdleTimeMillis}" />
+		<property name="validationQuery" value="${alibaba.validationQuery}" />
+		<property name="testWhileIdle" value="${alibaba.testWhileIdle}" />
+		<property name="testOnBorrow" value="${alibaba.testOnBorrow}" />
+		<property name="testOnReturn" value="${alibaba.testOnReturn}" />
+
+		<!-- <property name="poolPreparedStatements" value="${alibaba.poolPreparedStatements}" 
+			/> <property name="maxPoolPreparedStatementPerConnectionSize" value="${alibaba.maxPoolPreparedStatementPerConnectionSize}" 
+			/> -->
+
+		<property name="maxOpenPreparedStatements" value="${alibaba.maxOpenPreparedStatements}" />
+		<property name="removeAbandoned" value="${alibaba.removeAbandoned}" /> <!-- 打开removeAbandoned功能 -->
+		<property name="removeAbandonedTimeout" value="${alibaba.removeAbandonedTimeout}" /> <!-- 1800秒，也就是30分钟 -->
+		<property name="logAbandoned" value="${alibaba.logAbandoned}" /> <!-- 关闭abanded连接时输出错误日志 -->
+	</bean>
+
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+		<property name="namingStrategy">
+			<bean class="org.hibernate.cfg.ImprovedNamingStrategy" />
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<!--自动输出schema创建DDL语句 -->
+				<prop key="hibernate.hbm2ddl.auto">${hibernate.hbm2ddl.auto}</prop>
+				<prop key="hibernate.dialect">${hibernate.dialect}</prop>
+				<prop key="hibernate.show_sql">${hibernate.show_sql}</prop>
+				<prop key="hibernate.format_sql">${hibernate.format_sql}</prop>
+				<prop key="hibernate.max_fetch_depth">${hibernate.max_fetch_depth}</prop>
+				<prop key="hibernate.default_batch_fetch_size">${hibernate.default_batch_fetch_size}</prop>
+				<prop key="hibernate.query.substitutions">${hibernate.query.substitutions}</prop>
+				<prop key="hibernate.generate_statistics">${hibernate.generate_statistics}</prop>
+				<prop key="hibernate.bytecode.use_reflection_optimizer">${hibernate.bytecode.use_reflection_optimizer}</prop>				
+				<prop key="hibernate.cache.use_second_level_cache">${hibernate.cache.use_second_level_cache}</prop>
+				<prop key="hibernate.cache.use_query_cache">${hibernate.cache.use_query_cache}</prop>
+				<prop key="hibernate.cache.region.factory_class">${hibernate.cache.region.factory_class}</prop>
+				<prop key="net.sf.ehcache.configurationResourceName">${net.sf.ehcache.configurationResourceName}</prop>
+				<prop key="hibernate.cache.use_structured_entries">${hibernate.cache.use_structured_entries}</prop>
+				<!-- <prop key="hibernate.search.default.directory_provider">${hibernate.search.default.directory_provider}</prop> 
+					<prop key="hibernate.search.default.indexBase">${hibernate.search.default.indexBase}</prop> -->
+				<prop key="hibernate.search.lucene_version">${hibernate.search.lucene_version}</prop>
+			</props>
+		</property>
+
+		<!--主键Bean类 -->
+		<property name="packagesToScan" value="com.dhcc.nxgrid.entity" />
+	</bean>
+	
+	
+	<!-- 配置事务管理器 -->
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+
+	<!-- 配置事务的传播特性 -->
+	<tx:advice id="txAdvice" transaction-manager="transactionManager">
+		<tx:attributes>
+			<tx:method name="get*" read-only="true" propagation="REQUIRED" />
+			<tx:method name="find*" read-only="true" propagation="REQUIRED" />
+			<tx:method name="save*" propagation="REQUIRED"
+				rollback-for="java.lang.Exception" />
+			<tx:method name="update*" propagation="REQUIRED"
+				rollback-for="java.lang.Exception" />
+			<tx:method name="delete*" propagation="REQUIRED"
+				rollback-for="java.lang.Exception" />
+		</tx:attributes>
+	</tx:advice>
+
+	<aop:config>
+		<aop:pointcut id="allServiceMethod"
+			expression="execution(* com.dhcc.nxgrid.service..*.*(..))" />
+		<aop:advisor advice-ref="txAdvice" pointcut-ref="allServiceMethod" />
+	</aop:config>
+
+</beans>

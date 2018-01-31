@@ -1,0 +1,79 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+#rightPane span #forecaster{
+	width: 50px;
+}
+
+#dele{
+	position: relative;
+	left: 285px;
+	top: 0px;
+	width: 14px;
+	height: 14px;
+	background-image: url(../images/del.png);
+	background-size:14px 14px;
+	background-repeat:no-repeat;
+	float: left;
+}
+
+#divLeft{
+	width: 57px;
+	height: 342px;
+	float: left;
+	position: relative;
+	left: 14px;
+	font-size: 11px;
+}
+#divRight{
+	width: 210px;
+	height: 342px;
+	float: left;
+	position: relative;
+	left: 14px;
+}
+#divRight li.active {
+	background-color: #F58F1D;
+}
+#divBottom{
+	width: 290px;
+	height: 62px;
+	float: left;
+	position: relative;
+	top: 8px;
+	background-color: #F3F3F3;
+	padding: 5px;
+}
+#divBottom span{
+	margin-right: 5px;
+	background-color: #F3F3F3;
+}
+
+#rightPane{
+	position: relative;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	background: white;
+	font-weight: 700;
+	font-size: 10pt;
+	font-family: "微软雅黑","黑体","宋体";
+	border: 0px solid #add9c0;
+}
+#rightPane #divLeft span{
+	display: block;
+	height: 17px;
+	padding-bottom: 17px;
+}
+#rightPane #divRight li{
+	width: 50px;
+	height: 15px;
+	float: left;
+	list-style: none;
+	border: 1px solid #add9c0;
+	line-height: 15px;
+	text-align: center;
+	font-family: "Times New Roman", Times, serif;
+}

@@ -1,0 +1,61 @@
+.arrow-blur {
+	background: url('../images/arrow-blue.gif') no-repeat center;
+	display: inline-block;
+	width: 18px;	
+	height: 45px;
+}
+.css_yline {
+	background:#2686e0;
+	height: 100%;
+	width:2px;
+	margin: 0 auto;
+	border:0px;
+	display:block;
+}
+.css_xline {
+	background:#2686e0;
+	height: 2px;
+	margin-right:-6px;
+	border:0px;
+	display: inline-block;
+}
+.css_flow_line {
+	width:18px;
+	display: inline-block;
+}
+.down_arrow {
+	background: url('../images/down_arrow.png') no-repeat;
+	height:12px;width:12px;display: block;margin-top: -2px;
+}
+.css_flow_xline {
+	width:auto;
+	height:18px;
+}
+.css_flow_xline * {
+	vertical-align: middle;
+}
+.arrow-blur.arrow-right {
+	background-image: url('../images/arrow-blue-right.gif');
+	height: 18px;	
+	width: 45px;
+}
+.arrow-blur.arrow-left {
+	background-image: url('../images/arrow-blue-left.gif');
+	height: 18px;	
+	width: 45px;
+}
+.arrow-blur.arrow-up {
+	background-image: url('../images/arrow-blue-up.gif');
+}
+.css_flow_line .tip,
+.css_flow_xline .tip {
+	font-weight: bold;
+	background: white;
+}
+.css_flow_line .tip {
+	display: block;
+	margin-top:5px;
+}
+.css_flow_xline .tip {
+	margin-right:15px;
+}

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+  xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:mvc="http://www.springframework.org/schema/mvc" 
+  xmlns:context="http://www.springframework.org/schema/context"
+  xmlns:p="http://www.springframework.org/schema/p"
+  xmlns:aop="http://www.springframework.org/schema/aop"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans   
+					  http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+					  http://www.springframework.org/schema/mvc 
+					  http://www.springframework.org/schema/mvc/spring-mvc-4.1.xsd
+					  http://www.springframework.org/schema/context 
+					  http://www.springframework.org/schema/context/spring-context-4.1.xsd
+					  http://www.springframework.org/schema/aop 
+					  http://www.springframework.org/schema/aop/spring-aop-4.1.xsd">
+
+	<context:property-placeholder location="classpath:config.properties"/>
+
+	<!-- ViewResolver  定义JSP文件的位置   --> 
+   	<bean class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
+   		<property name="mediaTypes">
+   			<map>
+   				<entry key="html" value="text/html"/>
+            	<entry key="json" value="application/json"/>
+   			</map>
+   		</property>
+   		<property name="viewResolvers">
+   			<list>
+   				<bean class="org.springframework.web.servlet.view.ResourceBundleViewResolver">
+			    	<property name="basename" value="views"/>
+			    	<property name="order" value="0"/>  
+				</bean>
+			    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">     
+			    	<property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>     
+			    	<property name="prefix" value="/WEB-INF/views/"/>     
+			    	<property name="suffix" value=".jsp"/>
+			    	<property name="order" value="1"/>  
+			   	</bean> 
+   			</list>
+   		</property>
+   		<property name="defaultViews">
+	        <list>
+	            <bean class="org.springframework.web.servlet.view.json.MappingJackson2JsonView" >	            	
+			    <!-- 是否序列化对象变量名称 -->         
+			    <!-- <property name="extractValueFromSingleKeyModel" value="true" />	 -->            
+	            </bean>
+	        </list>
+    </property>
+   	</bean>
+   	
+	<bean id="jacksonObjectMapper" class="org.springframework.http.converter.json.Jackson2ObjectMapperFactoryBean">
+		<property name="simpleDateFormat" value="yyyy-MM-dd HH:mm:ss" />	
+	</bean>		
+   	<mvc:annotation-driven>
+		<mvc:message-converters register-defaults="true">
+			<bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+                <property name="objectMapper" ref="jacksonObjectMapper" />
+                <property name="supportedMediaTypes">
+                	<list>
+                		<value>text/plain;chartset=UTF-8</value>
+                		<value>application/json;chartset=UTF-8</value>                	
+                	</list>
+                </property>
+            </bean>
+            <bean class="org.springframework.http.converter.StringHttpMessageConverter">
+            	<constructor-arg type="java.nio.charset.Charset" value="UTF-8" />
+            </bean>            
+  		</mvc:message-converters>
+  		<mvc:argument-resolvers>
+  			<bean class="com.dhcc.gis.common.StringDateParamResolver" />
+  		</mvc:argument-resolvers>   	
+   	</mvc:annotation-driven>  
+   	
+   	<mvc:resources location="/scripts/" mapping="/scripts/**"/>
+   	<mvc:resources location="/images/" mapping="/images/**"/>
+   	<mvc:resources location="/css/" mapping="/css/**"/>
+   	<mvc:resources location="/help/" mapping="/help/**"/>
+   	<!-- 容器默认的DefaultServletHandler处理 所有静态内容与无RequestMapping处理的URL-->
+   	<mvc:default-servlet-handler/>
+   	
+	 <!-- 自动扫描且只扫描@Controller -->
+	<context:component-scan base-package="com.dhcc.gis.web" use-default-filters="false">
+		<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+		<context:include-filter type="annotation" expression="org.springframework.web.bind.annotation.ControllerAdvice"/>
+	</context:component-scan>
+   	
+	<!-- 定义无需Controller的url<->view直接映射 -->
+	<mvc:view-controller path="/" view-name="forward:/gridview/index"/>
+	
+	<!-- 全局异常配置 start -->  
+     <bean id="exceptionResolver" class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">  
+         <property name="exceptionMappings">  
+             <props>
+                 <prop key="java.lang.Throwable">error/500</prop>
+             </props>  
+         </property>  
+         <property name="statusCodes">  
+             <props>  
+                 <prop key="500">500</prop>  
+                 <prop key="404">404</prop>
+                 <prop key="403">403</prop>  
+             </props>  
+         </property>  
+         <!-- 设置日志输出级别，不定义则默认不输出警告等错误日志信息 -->  
+         <property name="warnLogCategory" value="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver"/>  
+         <!-- 默认错误页面，当找不到上面mappings中指定的异常对应视图时，使用本默认配置 -->  
+         <property name="defaultErrorView" value="error/500"/>  
+         <!-- 默认HTTP状态码 ，返回错误默认设置的状态码-->  
+         <property name="defaultStatusCode" value="200"/>  
+     </bean>  
+     <!-- 全局异常配置 end -->  
+</beans>

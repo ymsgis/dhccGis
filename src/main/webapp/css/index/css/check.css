@@ -1,0 +1,8 @@
+#nav span{
+	display: inline-block;
+	cursor: pointer;
+	padding: 5px;
+}
+#nav span.active{
+	background-color: #F58F1D;
+}

@@ -1,0 +1,159 @@
+
+/**地图顶部工具条**/
+.mapTopTool{position: fixed;left:0;top:0;right:0; z-index:900;height:34px;background-color:#f4f6f7;border-top:solid 1px #fff;border-bottom:solid 1px #c2cacc;box-shadow: 0px 1px 4px rgba(0,0,0,0.2);}
+.mapTopTool ul{padding:2px;width:auto;float:right;margin-right:4px;padding-left:4px;}
+.mapTopTool ul li{float:left;margin:0 1px;}
+.mapTopTool ul li a{ display: inline-block;line-height:24px;padding:2px 10px;color:#555; cursor: pointer;border-radius:3px;}
+.mapTopTool ul li a i.iconfont{margin-right:6px;padding-top:2px;}
+.mapTopTool ul li a:hover{color:#fff;background-color:#888;/**皮肤**/}
+.mapTopTool ul li.hover a,.mapTopTool ul li.hover a i.Czs{/**皮肤**/}
+
+ul.mapTool{border-left:solid 1px #ddd;}
+ul.winSetTool{}
+ul.winSetTool li .mWindBx{}
+
+
+/**图标按钮块**/
+.btnBoxA{}
+.btnBoxA a.btnBx{width:68px;height:68px;padding-top:6px; text-align: center; display: inline-block; float: left;}
+.btnBoxA a.btnBx i.iconfont{height:40px;line-height:40px;font-size:36px;}
+.winSetTool .winBtnA a.btnBx{margin-left:4px;margin-right:4px; text-align: center;}
+.jsq a.btnBx{/**计算器 同宽数字**/ min-width: 18px;}
+.jsq a.btnBx.hover{/**皮肤**/}
+
+a.btnBxb,a.btnB{margin-left:3px;margin-right:3px;text-align: center; display: inline-block;border-radius:4px;line-height:28px;padding:0 14px;}
+a.btnBxb i.iconfont{margin-right:4px;}
+
+/**文本输入**/
+.winIpntTx{padding:4px;}
+.winIpntTx dl.dhr label{}
+
+
+
+/**地图显示区**/
+.mapBox{position: fixed;left:0;top:35px;right:0;bottom:0;}
+
+.mapTPT{/**拓普图**/position: fixed;left:0;top:35px;right:0;z-index: 8;background-color:#fff;border-bottom:solid 1px #ddd; overflow: auto; }
+.mapTPT_tx{ position: relative;width:1400px;height:160px; overflow: auto;  display: block;}
+.mapTPT_tx dl{ position:absolute;border:solid 2px #969696;border-radius:6px;background-color:#f4f4f4;}
+.mapTPT_tx dl kbd{ position:absolute; top:40%;width:6px;height:6px;border-radius:50%; display: inline-block;background-color:#969696;}
+.mapTPT_tx dl kbd.il{left:-4px;}.mapTPT_tx dl kbd.ir{right:-4px;}
+.mapTPT_tx dl dt{padding:8px 16px; text-align: center;}
+.mapTPT_tx dl.w5z{min-width:100px;}
+.mapTPT_tx dl .fcts{ position: absolute;top:0;right:-80px; z-index: 10; display:none;background-color:#999;color:#fff;margin:0;border-radius:5px;}
+.mapTPT_tx dl:hover .fcts{ display: block;}
+.mapTPT_tx dl .fcts p{padding:8px 16px;}
+.mapTPT_tx dl.w5z .fcts{right:-80px;}
+.mapTPT_tx dl .fcts kbd.sjx{width:4px;height:4px;margin-left:-3px;float:left;margin-top:-1px;border-left:3px solid #969696;border-top:3px solid #969696;border-radius:0;background-color:#969696;transform: rotateZ(-45deg);}
+
+.mapTPT_tx dl.zt_eer{/**出错**/border-color: #d85050;background-color:#f9ecec;}
+.mapTPT_tx dl.zt_eer kbd{background-color:#d85050;}
+.mapTPT_tx dl.zt_eer .fcts{background-color:#d81c1c;}
+.mapTPT_tx dl.zt_eer .fcts kbd.sjx{border-color:#d81c1c;background-color:#d81c1c;}
+.mapTPT_tx dl.zt_jxz{/**进行中**/border-color: #4aba58;background-color:#e8f6e9;}
+.mapTPT_tx dl.zt_jxz kbd{background-color:#4aba58;}
+.mapTPT_tx dl.zt_jxz .fcts{background-color:#4aba58;}
+.mapTPT_tx dl.zt_jxz .fcts kbd.sjx{border-color:#4aba58;background-color:#4aba58;}
+.mapTPT_tx dl.zt_jxz kbd{background-color:#4aba58;}
+.mapTPT_tx dl.zt_iok{/**已完成**/border-color: #5dace9;background-color:#e8f2f6;}
+.mapTPT_tx dl.zt_iok kbd{background-color:#348fd5;}
+.mapTPT_tx dl.zt_iok .fcts{background-color:#44a1e9;}
+.mapTPT_tx dl.zt_iok .fcts kbd.sjx{border-color:#44a1e9;background-color:#44a1e9;}
+
+/***拓普图画线**/
+.mapTPT_tx .xt-canvas{ position:absolute;width:40px;height:40px;}
+
+
+
+/**内容区 左侧显示数据列表**/
+.mLeftBox{ position: fixed;left:0;top:35px;bottom:0; z-index: 120;background-color:#fafafa;min-width:360px;}
+.mLeftBox.Top0{top:0;}
+.mLeftBox.fllk{width:420px;}
+.mLeftIcoBx{width:69px;position: absolute;z-index: 140;left:0;top:0;bottom:0; background-color:#f0f5f8;}
+.mLeftIcoBx .ibtn{width:69px;height:36px; display: block; text-align: center;line-height: 35px; cursor: pointer;}
+.mLeftIcoBx .ibtn:hover{background-color:#fff;}
+.mLeftIcoBx .ibtn.btn_down{ position: fixed;bottom:0;}
+.mLeftIcoBx .mLeftIcoLis{width:70px;overflow: hidden;position:fixed;left:0; top:72px;bottom:36px;}
+.mLeftIcoBx .gdtxLis{position:absolute;top:-1px;}
+.mLeftIcoBx .gdtxLis li{position:relative;width:68px; text-align: center;padding:10px 0; display: block;}
+.mLeftIcoBx .gdtxLis li kbd{position: absolute;right:14px;top:14px;width:12px;height:12px;border-radius:50%;color:#fff; display: inline-block;background-color:#f00;font-size:10px;line-height:10px;}
+.mLeftIcoBx .gdtxLis li.hover{width:70px;padding:9px  0;}
+.mLeftIcoBx .gdtxLis li a{color:#666;cursor: pointer;}
+.mLeftIcoBx .gdtxLis li a i.iconfont{font-size: 36px;}
+
+
+/*********   内容区*********/
+.mainNrQ{position: fixed;right:0;bottom:0;top:35px;left:0;}
+.mainNrQ.mLyBoxLtb{left:420px;}
+.mainNrQ.mLyBox{left:360px;}
+
+
+
+
+
+/**表单及内容**/
+.mLeftTexBx{margin-left:70px; overflow: auto;}
+.mLeftNrBdBox{/**左侧图标右--内容显示区**/position:absolute;left:0;right:0;bottom:0;top:0; overflow: auto;}
+.mLeftNrBdBox.Lyico{left:68px;}
+.mLeftNrBdBox h3{height:10px;}
+.mLeftNrBdBox h3 a{padding-left:20px;color:#222;line-height:30px;}
+.mLeftNrBdBox h3.open a{background:url(../img/sprite.png) no-repeat left -37px;}
+.mLeftNrBdBox h3.close a{background:url(../img/sprite.png) no-repeat left 1px;}
+.formBx{/**表单-单行**/ padding:1px 0;}
+.formBx .txLabel{width:25%; display: inline-block; text-align: right;color:#888; line-height: 20px; float:left; overflow: hidden;}
+.formBx .ftxBox{margin-left:26%;border:solid 1px #ddd;}
+.formBx input[type=text],.formBx select,.formBx textarea{padding:6px;border:solid 1px #bbb;}
+.formBx input[type=text],.formBx textarea{width: 200px;}
+.formBx select{width: 214px;}
+
+.formBxtx{/**表单-单行- 3：7**/padding:4px;}
+.formBxtx .txLabel{display: inline-block; text-align: right;color:#888; line-height: 20px; float:left; overflow: hidden;}
+.formBxtx .ftxBox{}
+.formBxtx input[type=text],.formBxtx select,.formBxtx textarea{padding:6px;border:solid 1px #bbb;}
+.formBxtx input[type=text],.formBxtx textarea{width: 80%;}
+.formBxtx select{width: 80%;}
+
+
+
+/****li 数字选中效果****/
+.mtimelt li{height:45px;line-height:25px; text-align: right;padding-right:4px;color:#888;}
+.mtimeSelBtn{}
+.mtimeSelBtn li{float:left;width:20%;padding:2px 0; text-align: center; display: inline-block;margin:1px;cursor: pointer;border:solid 1px #ddd;}
+.mtimeSelBtn li.active,.mtimeSelBtn li:hover{/**皮肤**/}
+
+
+
+/**预报窗口多按钮**/
+.YBbtnBx a{margin:4px; text-align: center;}
+
+
+
+
+
+
+
+/********  标题 - 标签切换*******/
+.tabTits,.taTitb{height:40px;border-bottom:solid 1px #eee;}
+.tabTits ul.djTab{}
+.tabTits ul.djTab abbr,.taTitb ul.bt span{float:left;line-height:30px;margin-left:12px;margin-right:12px;font-size:15px;padding:0px 4px;display: inline-block;font-weight:bold;color:#666; }
+.tabTits ul.djTab abbr{cursor: pointer;}
+.tabTits ul.djTab abbr.hover,.taTitb ul.bt span.hover{height:38px;line-height:30px;}
+
+ul.formSech{min-height:32px;}
+ul.formSech li{float:left;margin:4px;margin-right:14px;}
+ul.formSech.fr li{margin-right:0;margin-left:14px;}
+ul.formSech li input,ul.formSech li select,ul.formSech li textarea{border-color:#ccc;}
+ul.formSech li input,ul.formSech li textarea{padding:7px 6px;}
+ul.formSech li select{padding:6px 6px;}
+
+
+
+
+
+.btnSeachBx{padding:14px 0;}
+.btnSeachBx.nr{padding:10px 16px;}
+
+
+/*****弹出窗口***/
+.WindowsTc{}
+.TcTit{padding:6px 12px;line-height: 24px;}

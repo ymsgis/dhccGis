@@ -1,0 +1,53 @@
+/**蓝色皮肤**/
+.Czs{color:#1079ca; /**专色**/}
+a.btn.Czs{color:#0875c9;background-color:#f0f5f8;border-color:#a6c8e3;}
+a.btn.Czs:hover{color:#fff;background-color:#2390c8;border-color:#2390c8;}
+.BvZS{background-color:#2390c8;/**专用背景**/}
+.l-btn-selected, .l-btn-selected:hover {
+	background-color: #2390c8;
+	color:#fff;
+}
+
+/**线条**/
+.Br-s-1l{border-right:solid 1px #bed1dc;}
+.Bt-s-1l{border-top:solid 1px #bed1dc;}
+.Bb-s-1l{border-bottom:solid 1px #bed1dc;}
+
+
+/**首页顶部***/
+.header{background:#2390c8;}/**顶部主导航**/
+.menuNav ul.tNav li:hover{background-color:#0764a5;}/**顶部主导航 鼠标划过**/
+.menuNav ul.tNav li ul li{border-top:solid 1px #479ed5;background:#1d89ce;}/**顶部主导航 下级菜单**/
+.menuNav ul.tNav li ul li:hover{background:#0c6bbc;}
+.menuNav ul.tNav li ul li:active{background:#164f9c;}
+.menuNav ul.tNav li ul li ul li{background:#0764a5;}
+.header ul.topRightUsNav li:hover{background:#0764a5;}/**顶部右侧鼠标划过背景**/
+.header ul.topRightUsNav li ul li a:hover{background:#d8e9f2;color:#1750a5;}/**顶部展开菜单鼠标划过背景**/
+
+/** 页面 地图顶部工具条 **/
+.mapTopTool ul li a:hover,.mapTopTool ul li a:hover i.Czs{background-color:#2390c8;color:#fff;}
+.mapTopTool ul li.hover a,.mapTopTool ul li.hover a i.Czs{/**皮肤**/background-color:#2390c8;color:#fff;}
+
+
+/**page.css 图标按钮块**/
+.winSetTool .btnBoxA a.btnBx,a.btnB{color:#555;background:#fff;}
+.btnBoxA a.btnBx i.iconfont{color:#999;}
+.btnBoxA a.btnBx:hover,.btnBoxA a.btnBx:hover i.iconfont{color:#0875c9;background:#fff;}
+.winSetTool .winBtnA a.btnBx,a.btnBxb{border:solid 1px #ddd;background-color:#f1f1f1;color:#555;}
+.winSetTool .winBtnA a.btnBx:hover,a.btnBxb:hover{border:solid 1px #2390c8;background-color:#2390c8;color:#fff;/*border:solid 1px #90c8f4;background-color:#e8f2f6;color:#0875c9;*/}
+
+
+.jsq a.btnBx.hover{border:solid 1px #2390c8;background-color:#2390c8;color:#fff;}
+
+/**page.css 内容区 左侧显示数据列表**/
+.mLeftIcoBx .gdtxLis li.hover{background-color:#fafafa;border-top:solid 1px #bed1dc;border-bottom:solid 1px #bed1dc;}
+.mLeftIcoBx .gdtxLis li.hover a, .mLeftIcoBx .gdtxLis li:hover a{color:#0875c9;}
+
+
+
+/****page.css li 数字选中效果****/
+.mtimeSelBtn li.active,.mtimeSelBtn li:hover{border:solid 1px #2390c8;background-color:#2390c8;color:#fff;}
+
+
+/********  标题 - 标签切换*******/
+.tabTits ul.djTab abbr.hover,.taTitb ul.bt span.hover{border-bottom:solid 3px #50a9ee;color:#1a8ac4;}
